@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b18">
+<title>CreatorZone — Les créateurs s'entraident</title>
+<style>
+:root{--bg:#080b18;--panel:#10162a;--panel2:#151d35;--line:#263454;--text:#f4f6ff;--muted:#a9b4d0;--purple:#8b5cf6;--blue:#38bdf8;--green:#4ade80}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#20205a 0,transparent 35%),radial-gradient(ellipse at 95% 20%,#102f54 0,transparent 30%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}button,input{font:inherit}button{cursor:pointer}.shell{max-width:1200px;margin:auto;padding:0 22px}.topbar{position:sticky;top:0;z-index:5;background:#080b18dd;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff12}.nav{height:76px;display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;gap:10px;font-size:1.4rem;font-weight:900;letter-spacing:-.8px;white-space:nowrap}.brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--purple),var(--blue));font-size:22px}.brand span:last-child{background:linear-gradient(90deg,#fff,#a78bfa 65%,#38bdf8);color:transparent;background-clip:text}.navlinks{display:flex;gap:6px;flex:1}.navlinks button,.mobile-menu{border:0;background:transparent;color:var(--muted);padding:10px 12px;border-radius:10px}.navlinks button:hover,.navlinks button.active{background:#ffffff0d;color:white}.nav-actions{display:flex;gap:10px}.btn{border:1px solid var(--line);border-radius:12px;padding:10px 15px;background:#ffffff08;color:var(--text);font-weight:700;transition:.2s}.btn:hover{transform:translateY(-1px);border-color:#8b5cf6}.btn.primary{border:0;background:linear-gradient(110deg,#7c3aed,#2563eb);box-shadow:0 8px 24px #6d28d933}.btn.small{padding:7px 11px;font-size:.86rem}.hero{padding:62px 0 38px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:36px}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #8b5cf644;background:#8b5cf614;color:#c4b5fd;padding:7px 11px;border-radius:99px;font-size:.82rem;font-weight:800}.dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green)}h1{font-size:clamp(2.5rem,5.5vw,4.7rem);line-height:1.03;letter-spacing:-2.8px;margin:20px 0}h1 em{font-style:normal;background:linear-gradient(90deg,#a78bfa,#38bdf8);color:transparent;background-clip:text}.hero p{max-width:600px;color:var(--muted);font-size:1.08rem;line-height:1.75}.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.stats{display:flex;gap:28px;margin-top:32px}.stat strong{display:block;font-size:1.3rem}.stat span{font-size:.82rem;color:var(--muted)}.hero-card{border:1px solid #8b5cf655;background:linear-gradient(145deg,#171d3b,#0d1327 75%);border-radius:24px;padding:18px;box-shadow:0 30px 90px #0007;transform:rotate(1deg)}.mock-head{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:.82rem;padding:4px 2px 14px}.mock-banner{border-radius:16px;padding:22px;background:linear-gradient(120deg,#312e81,#155e75);min-height:130px;display:flex;justify-content:space-between;align-items:end;overflow:hidden}.mock-banner h3{font-size:1.4rem;margin:0 0 7px}.mock-banner p{margin:0;color:#e0e7ff;font-size:.85rem}.orb{font-size:4.5rem;filter:drop-shadow(0 8px 20px #0006)}.mini-profiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:13px}.mini-profile{padding:12px 8px;text-align:center;background:#ffffff08;border:1px solid #ffffff10;border-radius:14px}.avatar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;margin:0 auto 8px;background:linear-gradient(135deg,#8b5cf6,#0ea5e9);font-size:1.3rem;border:2px solid #ffffff35}.mini-profile b{display:block;font-size:.78rem}.mini-profile small{color:var(--muted);font-size:.7rem}.section{padding:34px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:18px}.section-head h2{font-size:1.7rem;letter-spacing:-.7px;margin:0 0 6px}.section-head p{margin:0;color:var(--muted)}.text-link{border:0;background:transparent;color:#a78bfa;font-weight:800}.searchbar{display:flex;gap:10px;margin:22px 0}.searchbar input{flex:1;min-width:0;background:#0c1122;border:1px solid var(--line);color:white;border-radius:12px;padding:13px 15px;outline:none}.searchbar input:focus{border-color:var(--purple)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.filter{border:1px solid var(--line);background:#ffffff06;color:var(--muted);padding:8px 12px;border-radius:99px}.filter.active{background:#8b5cf622;border-color:#8b5cf6;color:#ddd6fe}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{border:1px solid var(--line);border-radius:18px;background:linear-gradient(150deg,#121a30,#0d1223);padding:18px;min-width:0;transition:.2s}.card:hover{transform:translateY(-3px);border-color:#6550a7}.creator-top{display:flex;align-items:center;gap:12px}.creator-top .avatar{width:54px;height:54px;flex-shrink:0;margin:0}.creator-name{font-weight:850}.handle{font-size:.83rem;color:var(--muted);margin-top:3px}.verified{color:#60a5fa}.tag{display:inline-flex;padding:5px 8px;border-radius:7px;background:#ffffff0c;color:#cbd5e1;font-size:.72rem;margin:13px 5px 0 0}.card p{color:var(--muted);font-size:.9rem;line-height:1.6}.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}.count{font-size:.8rem;color:var(--muted)}.recommend-btn{background:#8b5cf61c;color:#c4b5fd;border:1px solid #8b5cf655;border-radius:10px;padding:8px 10px;font-weight:800;font-size:.82rem}.recommend-btn.done{background:#14532d66;color:#86efac;border-color:#22c55e66}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature-card{padding:22px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(140deg,#141c34,#0c1121)}.feature-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:#8b5cf622;font-size:1.5rem;margin-bottom:18px}.feature-card h3{margin:0 0 8px}.feature-card p{color:var(--muted);line-height:1.6;font-size:.92rem}.event-banner{background:linear-gradient(110deg,#312e81,#0e7490);border:1px solid #6478e455;border-radius:20px;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:20px}.event-banner h3{font-size:1.4rem;margin:0 0 7px}.event-banner p{color:#e0e7ff;margin:0;line-height:1.6}.event-symbol{font-size:4rem}.event-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}.event-card{overflow:hidden;border:1px solid var(--line);border-radius:16px;background:#10162a}.event-art{height:105px;display:grid;place-items:center;font-size:2.8rem;background:linear-gradient(135deg,#312e81,#155e75)}.event-card:nth-child(2) .event-art{background:linear-gradient(135deg,#7c2d12,#9d174d)}.event-card:nth-child(3) .event-art{background:linear-gradient(135deg,#14532d,#1d4ed8)}.event-info{padding:15px}.event-info h4{margin:0 0 6px}.event-info p{margin:0;color:var(--muted);font-size:.82rem}.profile-panel{display:none;border:1px solid #8b5cf655;border-radius:20px;padding:24px;background:linear-gradient(145deg,#151d35,#0b1020);margin:20px 0}.profile-panel.show{display:block}.profile-cover{padding:24px;border-radius:15px;background:linear-gradient(110deg,#4c1d95,#075985);display:flex;align-items:center;gap:16px}.profile-cover .avatar{width:70px;height:70px;margin:0;font-size:1.8rem}.profile-cover h2{margin:0 0 5px}.profile-cover p{margin:0;color:#dbeafe}.profile-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.profile-tabs button{background:#ffffff08;border:1px solid var(--line);border-radius:9px;padding:8px 12px;color:var(--muted)}.profile-tabs button.active{color:white;border-color:var(--purple)}.profile-content{color:var(--muted);line-height:1.7}.empty{grid-column:1/-1;text-align:center;padding:35px;color:var(--muted);border:1px dashed var(--line);border-radius:16px}.footer{border-top:1px solid #ffffff12;margin-top:50px;padding:28px 0;color:var(--muted);font-size:.85rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#17213a;border:1px solid #4c5c85;padding:12px 17px;border-radius:12px;transition:.25s;z-index:10;box-shadow:0 12px 40px #0008}.toast.show{opacity:1;transform:translate(-50%,0)}.mobile-menu{display:none}
+@media(max-width:850px){.nav{gap:12px}.navlinks{gap:0}.navlinks button{padding:9px 7px;font-size:.85rem}.hero{grid-template-columns:1fr;padding-top:42px}.hero-card{max-width:620px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.feature-grid{grid-template-columns:1fr}.event-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.shell{padding:0 15px}.nav{height:66px;justify-content:space-between}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;padding:10px 15px;background:#0b1020;border-bottom:1px solid var(--line);flex-direction:column}.navlinks.open{display:flex}.navlinks button{text-align:left}.mobile-menu{display:block}.nav-actions .btn:first-child{display:none}.brand{font-size:1.18rem}.hero{gap:24px;padding-top:32px}h1{letter-spacing:-1.6px}.hero p{font-size:1rem}.stats{gap:18px}.hero-card{padding:12px}.mock-banner{padding:16px}.orb{font-size:3rem}.mini-profiles{gap:6px}.mini-profile{padding:9px 4px}.grid{grid-template-columns:1fr}.section-head{align-items:start}.section-head h2{font-size:1.45rem}.event-list{grid-template-columns:1fr}.event-banner{align-items:start;padding:18px}.event-symbol{font-size:2.8rem}.profile-panel{padding:14px}.profile-cover{padding:16px}.footer-inner{flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="shell nav">
+    <a href="#" class="brand" style="text-decoration:none;color:inherit"><span class="brand-mark">C</span><span>CreatorZone</span></a>
+    <nav class="navlinks" id="navlinks">
+      <button class="active" data-scroll="accueil">Accueil</button><button data-scroll="createurs">Découvrir</button><button data-scroll="evenements">Événements</button><button data-scroll="fonctionnalites">Projets & radios</button>
+    </nav>
+    <div class="nav-actions"><button class="btn" id="shareBtn">↗ Partager</button><button class="btn primary" id="createBtn">+ Ma page</button><button class="mobile-menu" id="menuBtn" aria-label="Ouvrir le menu">☰</button></div>
+  </div>
+</header>
+<main class="shell">
+  <section class="hero" id="accueil">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> La communauté des créateurs</div>
+      <h1>Les créateurs s'entraident.<br><em>Les communautés grandissent.</em></h1>
+      <p>Présente tes projets, découvre de nouveaux talents et recommande les créateurs que tu aimes. Ici, chaque communauté peut aider une autre à grandir.</p>
+      <div class="hero-buttons"><button class="btn primary" id="discoverBtn">Découvrir les créateurs&nbsp; →</button><button class="btn" id="howBtn">Comment ça marche ?</button></div>
+      <div class="stats"><div class="stat"><strong id="creatorCount">128+</strong><span>Créateurs (exemple)</span></div><div class="stat"><strong>3</strong><span>Espaces à découvrir</span></div><div class="stat"><strong>∞</strong><span>Collaborations possibles</span></div></div>
+    </div>
+    <div class="hero-card">
+      <div class="mock-head"><span>◉ CreatorZone / aperçu</span><span>● ● ●</span></div>
+      <div class="mock-banner"><div><h3>Des créateurs,<br>une seule communauté.</h3><p>Découvre. Recommande. Crée.</p></div><div class="orb">✦</div></div>
+      <div class="mini-profiles">
+        <div class="mini-profile"><div class="avatar">🎮</div><b>Pixel_Mc</b><small>Minecraft</small></div>
+        <div class="mini-profile"><div class="avatar">🎨</div><b>LunaDream</b><small>Art & gaming</small></div>
+        <div class="mini-profile"><div class="avatar">🎥</div><b>Zerako</b><small>Vidéos</small></div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="createurs">
+    <div class="section-head"><div><h2>Créateurs à découvrir ✨</h2><p>Un abonnement ne définit pas la qualité d'une idée.</p></div><button class="text-link" id="resetFilters">Tout afficher ↗</button></div>
+    <div class="searchbar"><input id="searchInput" type="search" placeholder="Rechercher un créateur, un projet, un thème…" aria-label="Rechercher"><button class="btn" id="searchBtn">Rechercher</button></div>
+    <div class="filters" id="filters"><button class="filter active" data-filter="Tous">Tous</button><button class="filter" data-filter="Gaming">🎮 Gaming</button><button class="filter" data-filter="Vidéo">🎬 Vidéo</button><button class="filter" data-filter="Art">🎨 Art</button><button class="filter" data-filter="Musique">🎵 Musique</button></div>
+    <div class="profile-panel" id="profilePanel">
+      <div class="profile-cover"><div class="avatar" id="profileAvatar">🎮</div><div><h2 id="profileName">TekoLyo</h2><p id="profileHandle">@tekolyo · Créateur de contenu</p></div></div>
+      <div class="profile-tabs"><button class="active" data-tab="À propos">À propos</button><button data-tab="Projets">Projets</button><button data-tab="Radios">Radios</button><button data-tab="Événements">Événements</button><button data-tab="Recommandations">Recommandations</button></div>
+      <div class="profile-content" id="profileContent">Bienvenue sur ma page ! Je partage ici mes vidéos, mes projets et les créateurs que je recommande.</div>
+      <div style="margin-top:15px"><button class="btn small" id="closeProfile">Fermer le profil</button></div>
+    </div>
+    <div class="grid" id="creatorGrid"></div>
+  </section>
+  <section class="section" id="evenements">
+    <div class="section-head"><div><h2>Événements communautaires 🌍</h2><p>Des projets collectifs pour rassembler les communautés.</p></div></div>
+    <div class="event-banner"><div><h3>Et si on créait notre propre r/place ?</h3><p>Un espace partagé où chaque communauté peut poser sa petite pierre.<br>Des pixels, des idées et beaucoup de créativité.</p><div style="margin-top:15px"><button class="btn primary" id="eventBtn">Je suis intéressé</button></div></div><div class="event-symbol">🧩</div></div>
+    <div class="event-list">
+      <article class="event-card"><div class="event-art">🧱🎨</div><div class="event-info"><h4>CreatorZone Place</h4><p>Un tableau collaboratif pour toutes les communautés.</p></div></article>
+      <article class="event-card"><div class="event-art">🎙️</div><div class="event-info"><h4>Radio des créateurs</h4><p>Des émissions, des invités et des découvertes.</p></div></article>
+      <article class="event-card"><div class="event-art">🤝</div><div class="event-info"><h4>Défi collaboratif</h4><p>Réunir plusieurs créateurs autour d'un même projet.</p></div></article>
+    </div>
+  </section>
+  <section class="section" id="fonctionnalites">
+    <div class="section-head"><div><h2>Plus qu'une page de liens</h2><p>Un endroit pour présenter, découvrir et construire ensemble.</p></div></div>
+    <div class="feature-grid">
+      <article class="feature-card"><div class="feature-icon">👤</div><h3>Ta page, ton univers</h3><p>Rassemble tes réseaux, tes projets, tes radios et tes événements dans une page personnalisée.</p></article>
+      <article class="feature-card"><div class="feature-icon">💜</div><h3>La recommandation</h3><p>Tu apprécies le travail d'un petit créateur ? Recommande-le pour aider de nouvelles personnes à le découvrir.</p></article>
+      <article class="feature-card"><div class="feature-icon">🚀</div><h3>Des projets communs</h3><p>Imagine des événements, des émissions et des collaborations qui rapprochent les communautés.</p></article>
+    </div>
+  </section>
+  <section class="section" id="ma-page">
+    <div class="event-banner"><div><h3>Chaque créateur mérite sa chance.</h3><p>Le prototype est une première idée. À terme, chaque créateur pourra créer son compte et personnaliser sa page.</p></div><button class="btn primary" id="joinBtn">Créer ma page</button></div>
+  </section>
+</main>
+<footer class="footer"><div class="shell footer-inner"><div class="brand"><span class="brand-mark">C</span><span>CreatorZone</span></div><span>Prototype de démonstration · Les profils affichés sont fictifs.</span><span>Les créateurs s'entraident 💜</span></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const creators = [
+ {name:"TekoLyo",handle:"@tekolyo",emoji:"🎮",category:"Gaming",desc:"Vidéos, lives et projets créatifs autour du gaming.",tags:["Minecraft","Communauté"],fans:"2,4 k",recommended:false},
+ {name:"Pixel_Mc",handle:"@pixelmc",emoji:"🧱",category:"Gaming",desc:"Je construis des mondes, des maps et des aventures Minecraft.",tags:["Minecraft","Build"],fans:"340",recommended:false},
+ {name:"LunaDream",handle:"@lunadream",emoji:"🎨",category:"Art",desc:"Illustrations, fan arts et créations colorées.",tags:["Illustration","Fan art"],fans:"180",recommended:false},
+ {name:"Zerako",handle:"@zerako",emoji:"🎥",category:"Vidéo",desc:"Des vidéos divertissantes et des projets entre amis.",tags:["YouTube","Humour"],fans:"920",recommended:false},
+ {name:"EchoWave",handle:"@echowave",emoji:"🎧",category:"Musique",desc:"Une radio communautaire pour faire découvrir des talents.",tags:["Radio","Musique"],fans:"215",recommended:false},
+ {name:"MikaPlay",handle:"@mikaplay",emoji:"🕹️",category:"Gaming",desc:"Jeux indés, découvertes et aventures en direct.",tags:["Twitch","Découverte"],fans:"510",recommended:false}
+];
+const tabContent={
+ "À propos":"Bienvenue sur ma page ! Je partage ici mes vidéos, mes projets et les créateurs que je recommande.",
+ "Projets":"🚧 Série Minecraft — épisodes en préparation.<br>🎬 Vidéo communautaire — bientôt disponible.",
+ "Radios":"🎙️ Radio Lyo — émissions communautaires et découvertes de créateurs.",
+ "Événements":"🌍 CreatorZone Place — un projet participatif imaginé pour réunir les communautés.",
+ "Recommandations":"💜 Ici apparaîtront les créateurs que ce profil souhaite mettre en avant."
+};
+let activeFilter="Tous", toastTimer;
+const grid=document.getElementById("creatorGrid"), searchInput=document.getElementById("searchInput");
+function showToast(message){const el=document.getElementById("toast");el.textContent=message;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2600)}
+function renderCreators(){
+ const q=searchInput.value.trim().toLowerCase();
+ const shown=creators.filter(c=>(activeFilter==="Tous"||c.category===activeFilter)&&[c.name,c.handle,c.category,c.desc,...c.tags].join(" ").toLowerCase().includes(q));
+ grid.innerHTML="";
+ if(!shown.length){grid.innerHTML='<div class="empty">Aucun créateur trouvé. Essaie un autre mot-clé.</div>';return}
+ shown.forEach(c=>{
+  const card=document.createElement("article");card.className="card";
+  card.innerHTML=`<div class="creator-top"><div class="avatar">${c.emoji}</div><div><div class="creator-name">${c.name} <span class="verified">✓</span></div><div class="handle">${c.handle}</div></div></div><div>${c.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div><p>${c.desc}</p><div class="card-bottom"><span class="count">👥 ${c.fans} abonnés (exemple)</span><button class="recommend-btn ${c.recommended?"done":""}" data-recommend="${c.name}">${c.recommended?"✓ Recommandé":"♡ Recommander"}</button></div><div style="margin-top:10px"><button class="btn small" data-profile="${c.name}">Voir la page →</button></div>`;
+  grid.appendChild(card);
+ });
+}
+function openProfile(name){const c=creators.find(x=>x.name===name);if(!c)return;document.getElementById("profileAvatar").textContent=c.emoji;document.getElementById("profileName").textContent=c.name;document.getElementById("profileHandle").textContent=c.handle+" · Créateur de "+c.category.toLowerCase();document.getElementById("profileContent").innerHTML=tabContent["À propos"];document.querySelectorAll(".profile-tabs button").forEach(b=>b.classList.toggle("active",b.dataset.tab==="À propos"));document.getElementById("profilePanel").classList.add("show");document.getElementById("profilePanel").scrollIntoView({behavior:"smooth",block:"start"});}
+grid.addEventListener("click",e=>{const rec=e.target.closest("[data-recommend]");if(rec){const c=creators.find(x=>x.name===rec.dataset.recommend);c.recommended=!c.recommended;renderCreators();showToast(c.recommended?`Tu recommandes ${c.name} 💜`:`Recommandation retirée pour ${c.name}.`);return}const prof=e.target.closest("[data-profile]");if(prof)openProfile(prof.dataset.profile)});
+document.getElementById("filters").addEventListener("click",e=>{const b=e.target.closest("[data-filter]");if(!b)return;activeFilter=b.dataset.filter;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));renderCreators()});
+document.getElementById("searchBtn").addEventListener("click",renderCreators);searchInput.addEventListener("input",renderCreators);
+document.getElementById("resetFilters").addEventListener("click",()=>{activeFilter="Tous";searchInput.value="";document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x.dataset.filter==="Tous"));renderCreators()});
+document.querySelector(".profile-tabs").addEventListener("click",e=>{const b=e.target.closest("[data-tab]");if(!b)return;document.querySelectorAll(".profile-tabs button").forEach(x=>x.classList.toggle("active",x===b));document.getElementById("profileContent").innerHTML=tabContent[b.dataset.tab]});
+document.getElementById("closeProfile").addEventListener("click",()=>document.getElementById("profilePanel").classList.remove("show"));
+document.querySelectorAll("[data-scroll]").forEach(b=>b.addEventListener("click",()=>{document.getElementById(b.dataset.scroll).scrollIntoView({behavior:"smooth"});document.querySelectorAll(".navlinks button").forEach(x=>x.classList.toggle("active",x===b));document.getElementById("navlinks").classList.remove("open")}));
+document.getElementById("discoverBtn").addEventListener("click",()=>document.getElementById("createurs").scrollIntoView({behavior:"smooth"}));
+document.getElementById("howBtn").addEventListener("click",()=>document.getElementById("fonctionnalites").scrollIntoView({behavior:"smooth"}));
+document.getElementById("createBtn").addEventListener("click",()=>{document.getElementById("ma-page").scrollIntoView({behavior:"smooth"});showToast("La création de compte sera ajoutée dans une prochaine version.")});
+document.getElementById("joinBtn").addEventListener("click",()=>showToast("Merci ! L'inscription sera disponible dans une prochaine version."));
+document.getElementById("eventBtn").addEventListener("click",()=>showToast("Intérêt enregistré pour cette démonstration !"));
+document.getElementById("shareBtn").addEventListener("click",async()=>{try{await navigator.clipboard.writeText(location.href);showToast("Lien de cette page copié !")}catch{showToast("Copie non disponible ici : copie l'adresse depuis ton navigateur.")}});
+document.getElementById("menuBtn").addEventListener("click",()=>document.getElementById("navlinks").classList.toggle("open"));
+renderCreators();
+</script>
+</body>
+</html>
